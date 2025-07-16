@@ -17,6 +17,8 @@ body {
   border: 1px solid #ced4da;
   border-radius: 5px;
   margin-bottom: 10px;
+  overflow-x: auto; /* 숫자가 길어질 경우 스크롤 */
+  white-space: nowrap;
 }
 .calc-btn {
   font-size: 1.2rem;
@@ -25,4 +27,22 @@ body {
 }
 .result-alert {
   margin-top: 10px;
+}
+
+/* 도전 과제: 기록 표시 스타일 추가 */
+#history-container {
+  margin-top: 20px;
+}
+
+#history-list {
+  max-height: 150px; /* 기록이 많아지면 스크롤 생성 */
+  overflow-y: auto;
+  border-radius: 5px;
+}
+
+#history-list .list-group-item {
+  background-color: #f8f9fa;
+  border-color: #dee2e6;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
 }

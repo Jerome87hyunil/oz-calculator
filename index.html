@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>계산기 서비스</title>
-    <!-- Bootstrap 5 CDN -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -18,7 +17,6 @@
       <h1 class="text-center mb-4">계산기 서비스</h1>
       <div id="display" class="form-control">0</div>
       <div class="row g-2">
-        <!-- 숫자 버튼 -->
         <div class="col-3">
           <button
             class="btn btn-secondary calc-btn w-100"
@@ -146,6 +144,11 @@
         </div>
       </div>
       <div id="result" class="alert alert-info result-alert d-none"></div>
+
+      <div id="history-container" class="mt-4">
+        <h2 class="text-center h5">기록 📜</h2>
+        <ul id="history-list" class="list-group"></ul>
+      </div>
     </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
