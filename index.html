@@ -3,24 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>계산기 서비스</title>
+    <title>계산기 서비스 (모듈화)</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../styles.css" />
   </head>
   <body>
     <div class="container calculator-container">
-      <h1 class="text-center mb-4">계산기 서비스</h1>
+      <h1 class="text-center mb-4">계산기 서비스 (모듈화)</h1>
       <div id="display" class="form-control">0</div>
       <div class="row g-2">
         <div class="col-3">
           <button
             class="btn btn-secondary calc-btn w-100"
-            onclick="appendNumber('7')"
+            onclick="handleAppendNumber('7')"
           >
             7
           </button>
@@ -28,7 +28,7 @@
         <div class="col-3">
           <button
             class="btn btn-secondary calc-btn w-100"
-            onclick="appendNumber('8')"
+            onclick="handleAppendNumber('8')"
           >
             8
           </button>
@@ -36,7 +36,7 @@
         <div class="col-3">
           <button
             class="btn btn-secondary calc-btn w-100"
-            onclick="appendNumber('9')"
+            onclick="handleAppendNumber('9')"
           >
             9
           </button>
@@ -44,7 +44,7 @@
         <div class="col-3">
           <button
             class="btn btn-warning calc-btn w-100"
-            onclick="setOperator('/')"
+            onclick="handleSetOperator('/')"
           >
             ÷
           </button>
@@ -52,7 +52,7 @@
         <div class="col-3">
           <button
             class="btn btn-secondary calc-btn w-100"
-            onclick="appendNumber('4')"
+            onclick="handleAppendNumber('4')"
           >
             4
           </button>
@@ -60,7 +60,7 @@
         <div class="col-3">
           <button
             class="btn btn-secondary calc-btn w-100"
-            onclick="appendNumber('5')"
+            onclick="handleAppendNumber('5')"
           >
             5
           </button>
@@ -68,7 +68,7 @@
         <div class="col-3">
           <button
             class="btn btn-secondary calc-btn w-100"
-            onclick="appendNumber('6')"
+            onclick="handleAppendNumber('6')"
           >
             6
           </button>
@@ -76,7 +76,7 @@
         <div class="col-3">
           <button
             class="btn btn-warning calc-btn w-100"
-            onclick="setOperator('*')"
+            onclick="handleSetOperator('*')"
           >
             ×
           </button>
@@ -84,7 +84,7 @@
         <div class="col-3">
           <button
             class="btn btn-secondary calc-btn w-100"
-            onclick="appendNumber('1')"
+            onclick="handleAppendNumber('1')"
           >
             1
           </button>
@@ -92,7 +92,7 @@
         <div class="col-3">
           <button
             class="btn btn-secondary calc-btn w-100"
-            onclick="appendNumber('2')"
+            onclick="handleAppendNumber('2')"
           >
             2
           </button>
@@ -100,7 +100,7 @@
         <div class="col-3">
           <button
             class="btn btn-secondary calc-btn w-100"
-            onclick="appendNumber('3')"
+            onclick="handleAppendNumber('3')"
           >
             3
           </button>
@@ -108,7 +108,7 @@
         <div class="col-3">
           <button
             class="btn btn-warning calc-btn w-100"
-            onclick="setOperator('-')"
+            onclick="handleSetOperator('-')"
           >
             -
           </button>
@@ -116,16 +116,13 @@
         <div class="col-3">
           <button
             class="btn btn-secondary calc-btn w-100"
-            onclick="appendNumber('0')"
+            onclick="handleAppendNumber('0')"
           >
             0
           </button>
         </div>
         <div class="col-3">
-          <button
-            class="btn btn-danger calc-btn w-100"
-            onclick="clearDisplay()"
-          >
+          <button class="btn btn-danger calc-btn w-100" onclick="handleClear()">
             C
           </button>
         </div>
@@ -137,24 +134,15 @@
         <div class="col-3">
           <button
             class="btn btn-warning calc-btn w-100"
-            onclick="setOperator('+')"
+            onclick="handleSetOperator('+')"
           >
             +
           </button>
         </div>
       </div>
       <div id="result" class="alert alert-info result-alert d-none"></div>
-
-      <div id="history-container" class="mt-4">
-        <h2 class="text-center h5">기록 📜</h2>
-        <ul id="history-list" class="list-group"></ul>
-      </div>
     </div>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-    <script src="calculator.js"></script>
+
+    <script src="./js/main.js" type="module"></script>
   </body>
 </html>
